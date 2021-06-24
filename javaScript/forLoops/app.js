@@ -55,9 +55,38 @@
 //     }
 // }
 
-for (let i = 0; i <= 10; i++) {
-    // for(let j = i + 1; j < 10; j++) {
-    //     console.log(i, j)
-    // }
-    console.log(i)
-} 
+// for (let i = 0; i <= 10; i++) {
+//     // for(let j = i + 1; j < 10; j++) {
+//     //     console.log(i, j)
+//     // }
+//     console.log(i)
+// } 
+
+
+// Program to represent the total number
+// let total = 0;
+
+// for(let i = 0; i <= 20; i++) {
+//   total +=  i;
+// }
+
+// console.log(total);
+
+// loop an array
+
+// let fruits = ['mango', 'banana', 'apple', 'cherry', 'orange'];
+
+// for (let i = 0; i < fruits.length; i++ ) {
+//     console.log(fruits[i])
+// }
+
+// loop an array inside another
+
+let studentTables = [['Sonia', 'Sofia', 'Renata'], ['Maria', 'Jonh', 'Pedro'], ['Daniel', 'Vera', 'Amy']];
+
+for (i = 0; i < studentTables.length; i++) {
+    const table = studentTables[i];
+    for (j = 0; j < table.length; j++) {
+        console.log(table[j])
+    }
+}

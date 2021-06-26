@@ -14,28 +14,32 @@
 // }
 // console.log('CONGRATS!!')
 
-const maxNum = 4;
+let maxNum = parseInt(prompt('Enter your maximum number:'));
 
-let guess = prompt('Welcome! Enter your max number:');
 
-let times = guess
+while (!maxNum) {
 
-while (true) {
-    if (guess > maxNum) {
-        guess = prompt('Too high. Guess again');
-        times++
-    } else if (guess < maxNum) {
-        guess = prompt('Too low. Guess again');
-        times++
-    } else if (guess === maxNum){
-        console.log(`Great! the number is ${maxNum} You tried ${times} times`)
-        times++
-    } else if (guess === 'q'){
-        console.log(`You have quit`)
-        break;
-    }
-    
+    maxNum = parseInt(prompt('Enter a valid number:'));
 }
 
+const targetNum = Math.floor((Math.random() * maxNum)) + 1;
 
+let guess = prompt('Enter your guess');
+let attemps = 1;
+
+while (parseInt(guess) !== targetNum) {
+    if (guess === 'q') break;
+    attemps++
+    if (guess > targetNum) {
+        guess = prompt('Too high. Guess again');
+    } else {
+        guess = prompt('Too low. Guess again');  
+    }
+}
+if (guess === 'q') {
+    console.log('OK, You quit')
+} else {
+    console.log(`You got it! It took you ${attemps} guesses. The number is ${targetNum}`)
+
+}
 
